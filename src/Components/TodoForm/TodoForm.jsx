@@ -40,7 +40,7 @@ export default class TodoForm extends Component {
                   <Input name="task" id="task" onChange={(event) => this.handleChange(event)} value={this.state.task} />
                 <label htmlFor='description'>Description: </label>
                   <Input name="description" id="description" onChange={(event) => this.handleChange(event)} value={this.state.description} />
-                <Button type="submit" color="primary" variant="outlined">Submit</Button>
+                <Button type="submit" color="primary" variant="outlined">Submit</Button><br />
       </form>
       </>
     )

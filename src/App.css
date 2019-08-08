@@ -27,7 +27,16 @@ button {
   box-shadow: 1px 1px 1px grey;
   background-color: rgba(218, 231, 242, 0.4);
 }
+#expand-panel:hover {
+  background-color: rgba(218, 221, 242, 0.4);
+  transform: scale(1.03);
+}
 
 h1 {
   text-align: center;
+}
+
+.links{
+  display: flex;
+  justify-content: space-around;
 }
