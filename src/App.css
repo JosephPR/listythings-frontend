@@ -11,7 +11,9 @@
 .delete-button {
   max-height: 50px;
   margin-left: 10%!important;
-  color:red!important;
+  color:rgb(13, 60, 57)!important;
+  border: none!important;
+  float: right!important;
 }
 
 button {
@@ -39,4 +41,20 @@ h1 {
 .links{
   display: flex;
   justify-content: space-around;
+}
+
+#groceries li {
+  max-width: 20%;
+  margin-left: 30%;
+  text-align: center;
+  list-style: none;
+}
+
+.calendar {
+  margin-top: 60px;
+  margin-left: 30%;
+}
+
+.home-heading {
+  text-align: center;
 }
