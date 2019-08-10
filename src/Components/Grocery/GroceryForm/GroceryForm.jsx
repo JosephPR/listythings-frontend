@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Input from '@material-ui/core/Input';
-import '../../App.css'
+import '../../../App.css'
 import Button from '@material-ui/core/Button';
 
-export default class TodoForm extends Component {
+export default class GroceryForm extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      task: '',
-      description: ''
+      item: ''
     }
   }
 
@@ -20,12 +19,11 @@ export default class TodoForm extends Component {
 
 
   handleSubmit = (event) => {
-    const newTodo = this.state
+    const newGrocery = this.state
   event.preventDefault()
-  this.props.postTodo(newTodo)
+  this.props.postGrocery(newGrocery)
   this.setState ({
-    task:'',
-    description:''
+    item: ''
   })
 
   }
@@ -34,12 +32,10 @@ export default class TodoForm extends Component {
   render(){
     return (
       <>
-      <h1 className='form-heading'>Todo it!</h1>
+      <h1 className='form-heading'>Grocery it!</h1>
       <form  onSubmit={(event) => this.handleSubmit(event)} className="form">
-          <label htmlFor='task'>Task: </label>
-                  <Input name="task" id="task" onChange={(event) => this.handleChange(event)} value={this.state.task} />
-                <label htmlFor='description'>Description: </label>
-                  <Input name="description" id="description" onChange={(event) => this.handleChange(event)} value={this.state.description} />
+          <label htmlFor='item'>Item: </label>
+                  <Input name="item" id="item" onChange={(event) => this.handleChange(event)} value={this.state.item} />
                 <Button type="submit" color="primary" variant="outlined">Submit</Button><br />
       </form>
       </>

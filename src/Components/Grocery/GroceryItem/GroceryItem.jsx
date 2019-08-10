@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import '../../App.css'
+import '../../../App.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
 
 export default class GroceryItem extends Component {
 

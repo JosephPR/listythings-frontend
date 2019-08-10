@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Grocery from '../Grocery/Grocery'
-// import App from '../../App'
+import Tablature from '../Tablature/Tablature'
 import Todo from '../Todo/Todo';
 import Home from '../Home/Home';
 
@@ -23,6 +23,9 @@ import Home from '../Home/Home';
                <li>
                  <Link to="/groceries/">Groceries</Link>
                </li>
+               <li>
+                 <Link to="/tablature/">Tablature</Link>
+               </li>
              </ul>
            </nav>
 
@@ -31,6 +34,7 @@ import Home from '../Home/Home';
            <Route exact path="/" render={() => <h1>Hello</h1>} component={Home} />
            <Route path="/todos" component={Todo} />
            <Route path="/groceries" component={Grocery} />
+           <Route path="/tablature" component={Tablature} />
 
        </Router>
      </>

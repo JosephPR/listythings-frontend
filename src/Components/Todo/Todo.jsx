@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import TodoForm from '../../Components/TodoForm/TodoForm';
-import TodoContainer from '../../Components/TodoContainer/TodoContainer'
+import TodoForm from './TodoForm/TodoForm';
+import TodoContainer from './TodoContainer/TodoContainer'
 
 import '../../App.css'
 

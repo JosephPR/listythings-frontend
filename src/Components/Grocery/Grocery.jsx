@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import GroceryForm from '../../Components/GroceryForm/GroceryForm';
-import GroceryContainer from '../../Components/GroceryContainer/GroceryContainer'
+import GroceryForm from './GroceryForm/GroceryForm';
+import GroceryContainer from './GroceryContainer/GroceryContainer'
 
 import '../../App.css'
 

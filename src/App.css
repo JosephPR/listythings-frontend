@@ -8,6 +8,21 @@
   margin-top: 10px;
   border-top: none
 }
+
+.tab-page {
+display: grid; 
+}
+
+.tab-form {
+  margin-left: 5%
+}
+
+.tab-form Input{
+  background-color: white;
+  font-size: 24px;
+  padding: 10px 10px 10px 5px;
+  margin: 25px 0;
+}
 .delete-button {
   max-height: 50px;
   margin-left: 10%!important;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../App.css'
+import '../../../App.css'
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -7,10 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 
-export default class TodoItem extends Component {
+export default class TablatureItem extends Component {
 
 render() {
-  const { id, task, description, deleteTodo } = this.props
+  const { id, name, description, deleteTablature } = this.props
   return(
     <React.Fragment>
       <ExpansionPanel id="expand-panel">
@@ -20,14 +20,14 @@ render() {
       aria-controls="panel1a-content"
       id="panel1a-header"
     >
-      <Typography id="name"> {task}</Typography>
+      <Typography id="name"> {name}</Typography>
     </ExpansionPanelSummary>
     <ExpansionPanelDetails>
       <Typography>
       {description}
 
       </Typography>
-      <Button className="delete-button" onClick= { () => deleteTodo(id)} color="primary" variant="outlined">
+      <Button className="delete-button" onClick= { () => deleteTablature(id)} color="primary" variant="outlined">
         Delete
       </Button>
     </ExpansionPanelDetails>
