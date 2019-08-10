@@ -1,5 +1,25 @@
+.card {
+  width: 300px;
+  height: 400px;
+  box-shadow: 2px 2px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: .5s;
+}
+
+.card-list {
+  width: 35vw;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 20px;
+padding-right: 40px;
+}
+
 .form {
-  margin-left: 30%
+  margin-left: 35%
 }
 
 .form Input {
@@ -8,13 +28,43 @@
   margin-top: 10px;
   border-top: none
 }
-
-.tab-page {
-display: grid; 
+section {
+  color: #black;
+  text-align: center;
 }
 
-.tab-form {
-  margin-left: 5%
+div {
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+a {
+  color: rgb(142, 39, 11);
+}
+a:hover {
+  color: rgb(241, 136, 12);
+}
+
+/* Pattern styles */
+.container {
+  display: table;
+  width: 100%;
+}
+
+.left-half {
+  position: absolute;
+  left: 0px;
+  width: 40%;
+}
+
+.right-half {
+  position: absolute;
+  right: 0px;
+  width: 60%;
 }
 
 .tab-form Input{
@@ -30,12 +80,21 @@ display: grid;
   border: none!important;
   float: right!important;
 }
+.tab-delete-button {
+  max-height: 50px;
+  margin-left: 10%!important;
+  color:rgb(13, 60, 57)!important;
+  border: none!important;
+}
 
 button {
   margin-left: 25px;
   color: green;
   background: black;
   font-size: 1rem;
+  position: absolute;
+  right:    0;
+  bottom:   0;
 }
 #expand-panel {
   margin-left: 35%;
@@ -67,7 +126,7 @@ h1 {
 
 .calendar {
   margin-top: 60px;
-  margin-left: 30%;
+  margin-left: 37%;
 }
 
 .home-heading {

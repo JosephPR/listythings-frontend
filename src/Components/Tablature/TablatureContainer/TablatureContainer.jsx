@@ -19,7 +19,7 @@ export default function TablatureContainer(props) {
   return(
     <>
 
-      <div  className="tablature-card-list">{tablatures}</div>
+      <div  className="card-list">{tablatures}</div>
 
     </>
   )

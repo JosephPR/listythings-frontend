@@ -64,13 +64,19 @@ export default class Tablature extends Component {
     const { tablatures } = this.state;
     return (
       <>
-      <div className="tab-page">
+      <section class="container">
+  <div class="left-half">
         <TablatureForm postTablature={this.postTablature} addTablature={this.addTablature}/>
-        {tablatures
-          ? <TablatureContainer  tablatures={tablatures} deleteTablature={this.deleteTablature}/>
-        : <h1>Almost There</h1>
-        }
-      </div>
+
+  </div>
+  <div class="right-half">
+    {tablatures
+      ? <TablatureContainer  tablatures={tablatures} deleteTablature={this.deleteTablature}/>
+    : <h1>Almost There</h1>
+    }
+  </div>
+</section>
+      
 
       </>
     )

@@ -1,37 +1,39 @@
 import React, { Component } from 'react'
-import '../../../App.css'
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import '../../../App.css'
 
 export default class TablatureItem extends Component {
 
 render() {
-  const { id, name, description, deleteTablature } = this.props
+  const { id, name, url, description, composer, skill, deleteTablature } = this.props
   return(
     <React.Fragment>
-      <ExpansionPanel id="expand-panel">
-    <ExpansionPanelSummary
-      expandIcon={<ExpandMoreIcon />}
 
-      aria-controls="panel1a-content"
-      id="panel1a-header"
-    >
-      <Typography id="name"> {name}</Typography>
-    </ExpansionPanelSummary>
-    <ExpansionPanelDetails>
-      <Typography>
-      {description}
-
-      </Typography>
-      <Button className="delete-button" onClick= { () => deleteTablature(id)} color="primary" variant="outlined">
-        Delete
-      </Button>
-    </ExpansionPanelDetails>
-  </ExpansionPanel>
+      <Card className="card">
+     <CardContent>
+       <Typography>
+         {name}
+       </Typography>
+       <Typography>
+    <a href={url}>{name} Tablature</a>
+       </Typography>
+       <Typography color="textSecondary">
+         {description}
+       </Typography>
+       <Typography>
+        {composer}
+       </Typography>
+       <Typography>
+        <h5>Skill_Level: {skill}</h5>
+       </Typography>
+       <Button size="small" className="tab-delete-button" onClick= { () => deleteTablature(id)} color="primary" variant="outlined">
+         Delete
+       </Button>
+     </CardContent>
+   </Card>
 
 
     </React.Fragment>
