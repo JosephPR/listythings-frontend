@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { SearchBox } from '../SearchBox/SearchBox'
 
 import TablatureForm from './TablatureForm/TablatureForm';
 import TablatureContainer from './TablatureContainer/TablatureContainer'
@@ -10,6 +11,7 @@ export default class Tablature extends Component {
       super()
       this.state = {
         tablatures: [],
+        searchField: '',
       }
     };
 
@@ -59,9 +61,15 @@ export default class Tablature extends Component {
   .then(result => this.fetchTablatures())
   }
 
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value })
+  }
+
 
   render() {
-    const { tablatures } = this.state;
+    const { tablatures, searchField } = this.state;
+    const filteredTabs = tablatures.filter(tab =>
+    tab.name.toLowerCase().includes(searchField.toLowerCase()));
     return (
       <>
       <section class="container">
@@ -70,13 +78,14 @@ export default class Tablature extends Component {
 
   </div>
   <div class="right-half">
+    <SearchBox placeholder="Search Tabs by Name" handleChange={this.handleChange} />
     {tablatures
-      ? <TablatureContainer  tablatures={tablatures} deleteTablature={this.deleteTablature}/>
+      ? <TablatureContainer  tablatures={filteredTabs} deleteTablature={this.deleteTablature}/>
     : <h1>Almost There</h1>
     }
   </div>
 </section>
-      
+
 
       </>
     )

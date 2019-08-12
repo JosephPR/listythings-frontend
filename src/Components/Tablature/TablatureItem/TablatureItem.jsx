@@ -13,7 +13,7 @@ render() {
     <React.Fragment>
 
       <Card className="card">
-     <CardContent>
+     <CardContent className="card-content">
        <Typography>
          {name}
        </Typography>
