@@ -20,14 +20,14 @@ export default class Tablature extends Component {
     }
 
     fetchTablatures = () => {
-      let url = "http://localhost:3000/tablatures"
+      let url = "https://listythingsbackend.herokuapp.com/tablatures"
       fetch(url)
       .then(response => response.json())
       .then(result => this.setState({tablatures: result}))
     }
 
     deleteTablature = (id) => {
-    let url = `http://localhost:3000/tablatures/${id}`
+    let url = `https://listythingsbackend.herokuapp.com/tablatures/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -47,7 +47,7 @@ export default class Tablature extends Component {
   }
 
   postTablature = (newTablature) => {
-    let url = "http://localhost:3000/tablatures"
+    let url = "https://listythingsbackend.herokuapp.com/tablatures"
   fetch(url, {
     method: "POST",
     body: JSON.stringify(newTablature),

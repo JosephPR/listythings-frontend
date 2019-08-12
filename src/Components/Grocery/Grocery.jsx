@@ -18,14 +18,14 @@ export default class Grocery extends Component {
     }
 
     fetchGroceries = () => {
-      let url = "http://localhost:3000/groceries"
+      let url = "https://listythingsbackend.herokuapp.com/groceries"
       fetch(url)
       .then(response => response.json())
       .then(result => this.setState({groceries: result}))
     }
 
     deleteGrocery = (id) => {
-    let url = `http://localhost:3000/groceries/${id}`
+    let url = `https://listythingsbackend.herokuapp.com/groceries/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -45,7 +45,7 @@ export default class Grocery extends Component {
   }
 
   postGrocery = (newGrocery) => {
-    let url = "http://localhost:3000/groceries"
+    let url = "https://listythingsbackend.herokuapp.com/groceries"
   fetch(url, {
     method: "POST",
     body: JSON.stringify(newGrocery),

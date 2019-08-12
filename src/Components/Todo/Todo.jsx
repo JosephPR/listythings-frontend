@@ -18,14 +18,14 @@ export default class Todo extends Component {
     }
 
     fetchTodos = () => {
-      let url = "http://localhost:3000/todos"
+      let url = "https://listythingsbackend.herokuapp.com/todos"
       fetch(url)
       .then(response => response.json())
       .then(result => this.setState({todos: result}))
     }
 
     deleteTodo = (id) => {
-    let url = `http://localhost:3000/todos/${id}`
+    let url = `https://listythingsbackend.herokuapp.com/todos/${id}`
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -45,7 +45,7 @@ export default class Todo extends Component {
   }
 
   postTodo = (newTodo) => {
-    let url = "http://localhost:3000/todos"
+    let url = "https://listythingsbackend.herokuapp.com/todos"
   fetch(url, {
     method: "POST",
     body: JSON.stringify(newTodo),
