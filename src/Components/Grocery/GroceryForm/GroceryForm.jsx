@@ -32,7 +32,7 @@ export default class GroceryForm extends Component {
   render(){
     return (
       <>
-      <h1 className='form-heading'>Grocery it!</h1>
+      <img src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/9660/25901/Grocery_List__32077.1524257828.png?c=2" alt="grocery-list" className='form-heading' />
       <form  onSubmit={(event) => this.handleSubmit(event)} className="form">
           <label htmlFor='item'>Item: </label>
                   <Input name="item" id="item" onChange={(event) => this.handleChange(event)} value={this.state.item} />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../../App.css'
 export default class Home extends Component {
 
   render(){
@@ -10,8 +10,8 @@ export default class Home extends Component {
 
         The perfect way to keep
          track of all the lists that you make
-
     </div>
+    <img className="home-img" src="http://cdn.onlinewebfonts.com/svg/img_532951.png" alt="list" />
     </>
     )
   }

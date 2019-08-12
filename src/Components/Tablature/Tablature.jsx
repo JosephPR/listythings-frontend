@@ -73,20 +73,18 @@ export default class Tablature extends Component {
     return (
       <>
       <section class="container">
-  <div class="left-half">
-        <TablatureForm postTablature={this.postTablature} addTablature={this.addTablature}/>
+        <div class="left-half">
+              <TablatureForm postTablature={this.postTablature} addTablature={this.addTablature}/>
 
-  </div>
-  <div class="right-half">
-    <SearchBox placeholder="Search Tabs by Name" handleChange={this.handleChange} />
-    {tablatures
-      ? <TablatureContainer  tablatures={filteredTabs} deleteTablature={this.deleteTablature}/>
-    : <h1>Almost There</h1>
-    }
-  </div>
-</section>
-
-
+        </div>
+        <div class="right-half">
+          <SearchBox placeholder="Search Tabs by Name" handleChange={this.handleChange} />
+          {tablatures
+            ? <TablatureContainer  tablatures={filteredTabs} deleteTablature={this.deleteTablature}/>
+          : <h1>Almost There</h1>
+          }
+        </div>
+      </section>
       </>
     )
   }
